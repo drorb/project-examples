@@ -1,1 +1,10 @@
-maven:
+version: 1
+type: maven
+resolver:
+  serverId: localhost
+  snapshotRepo: libs-snapshots
+  releaseRepo: libs-releases
+deployer:
+  serverId: art
+  snapshotRepo: libs-snapshots-local
+  releaseRepo: libs-release-local
