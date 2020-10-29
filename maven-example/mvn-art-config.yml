@@ -6,5 +6,5 @@ resolver:
   releaseRepo: libs-releases
 deployer:
   serverId: art
-  snapshotRepo: libs-snapshots-local
+  snapshotRepo: libs-snapshot-local
   releaseRepo: libs-release-local
