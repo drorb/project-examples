@@ -4,6 +4,10 @@ resources:
     configuration:
       gitProvider: GitHub_drorb
       path: drorb/project-examples
+  - name: appl_build_info
+    type: BuildInfo
+    configuration:
+      sourceArtifactory: art 
 pipelines:
   - name: pipeline_maven_example
     steps:
@@ -19,3 +23,5 @@ pipelines:
               - name: art
           inputResources:
               - name: myAppRepo
+          outputResources:
+            - name: appl_build_info
