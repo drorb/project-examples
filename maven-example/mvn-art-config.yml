@@ -1,7 +1,7 @@
 version: 1
 type: maven
 resolver:
-  serverId: localhost
+  serverId: art
   snapshotRepo: libs-snapshots
   releaseRepo: libs-releases
 deployer:
