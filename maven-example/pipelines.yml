@@ -9,11 +9,12 @@ pipelines:
     steps:
       - name: step_install
         type: MvnBuild
-        mvnCommand: install
-        sourceLocation: maven-example
-        configFileLocation: .
-        configFileName: pom.xml
-        integrations:
-            - name: art
-        inputResources:
-            - name: myAppRepo
+        configuration:
+          mvnCommand: install
+          sourceLocation: maven-example
+          configFileLocation: .
+          configFileName: pom.xml
+          integrations:
+              - name: art
+          inputResources:
+              - name: myAppRepo
