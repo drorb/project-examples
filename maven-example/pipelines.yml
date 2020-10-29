@@ -13,7 +13,7 @@ pipelines:
           mvnCommand: install
           sourceLocation: maven-example
           configFileLocation: .
-          configFileName: pom.xml
+          configFileName: settings.xml
           integrations:
               - name: art
           inputResources:

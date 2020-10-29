@@ -80,9 +80,9 @@
                         </goals>
                         <configuration>
                             <publisher>
-                                <contextUrl>${env.int_MyArtifactory_url}</contextUrl>
-                                <username>${env.int_MyArtifactory_user}</username>
-                                <password>${env.int_MyArtifactory_apikey}</password>
+                                <contextUrl>${artifactoryUrl}</contextUrl>
+                                <username>${username}</username>
+                                <password>${password}</password>
                                 <repoKey>libs-release-local</repoKey>
                                 <snapshotRepoKey>libs-snapshot-local</snapshotRepoKey>
                             </publisher>
