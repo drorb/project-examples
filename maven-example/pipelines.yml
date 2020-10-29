@@ -4,6 +4,6 @@ pipelines:
       - name: install
         type: MvnBuild
         mvnCommand: install
-          sourceLocation: ./
-          configFileLocation: ./
+        sourceLocation: maven-example
+        configFileLocation: .
           configFileName: pom.xml
