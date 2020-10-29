@@ -1,3 +1,9 @@
+resources:
+  - name: myAppRepo
+    type: GitRepo
+    configuration:
+      gitProvider: GitHub_drorb
+      path: drorb/project-examples
 pipelines:
   - name: pipeline_maven_example
     steps:
@@ -7,3 +13,5 @@ pipelines:
         sourceLocation: maven-example
         configFileLocation: .
         configFileName: pom.xml
+        integrations:
+            - name: art
