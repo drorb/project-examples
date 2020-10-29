@@ -16,7 +16,7 @@ pipelines:
       - name: step_install
         type: MvnBuild
         configuration:
-          mvnCommand: install publish
+          mvnCommand: install
           sourceLocation: maven-example
           configFileLocation: .
           configFileName: mvn-art-config.yml
