@@ -23,5 +23,11 @@ pipelines:
               - name: art
           inputResources:
               - name: myAppRepo
+      - name: publish_app_build
+        type: PublishBuildInfo
+        configuration:
+          forceXrayScan: false
+          inputSteps:
+            - name: step_install
           outputResources:
             - name: appl_build_info
