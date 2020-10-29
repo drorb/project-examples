@@ -1,1 +1,9 @@
 pipelines:
+  - name: pipeline_maven_example
+    steps:
+      - name: install
+        type: MvnBuild
+        mvnCommand: install
+          sourceLocation: ./
+          configFileLocation: ./
+          configFileName: pom.xml
