@@ -14,6 +14,7 @@ pipelines:
           sourceLocation: maven-example
           configFileLocation: .
           configFileName: mvn-art-config.yml
+          autoPublishBuildInfo: true
           integrations:
               - name: art
           inputResources:
