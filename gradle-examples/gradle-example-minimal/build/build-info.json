@@ -1,0 +1,52 @@
+{
+  "version" : "1.0.1",
+  "name" : "gradle-example-minimal",
+  "number" : "1602276439713",
+  "buildAgent" : {
+    "name" : "Gradle",
+    "version" : "5.6.4"
+  },
+  "agent" : {
+    "name" : "Gradle",
+    "version" : "5.6.4"
+  },
+  "started" : "2020-10-09T23:47:19.707+0300",
+  "durationMillis" : 99,
+  "principal" : "drorb",
+  "artifactoryPrincipal" : "stackoverflow",
+  "artifactoryPluginVersion" : "Unknown",
+  "vcs" : [ ],
+  "licenseControl" : {
+    "runChecks" : false,
+    "includePublishedArtifacts" : false,
+    "autoDiscover" : false,
+    "scopesList" : "",
+    "licenseViolationsRecipientsList" : ""
+  },
+  "modules" : [ {
+    "id" : ":gradle-example-minimal:1.0-SNAPSHOT",
+    "artifacts" : [ {
+      "type" : "jar",
+      "sha1" : "15cf9b4e0b1dc57f576731c18fdaa4c4a0e28d00",
+      "md5" : "73bf201d6c264105dc4ff766f9313c74",
+      "name" : "gradle-example-minimal-1.0-SNAPSHOT.jar",
+      "path" : "libs-snapshot-local//gradle-example-minimal/1.0-SNAPSHOT/gradle-example-minimal-1.0-SNAPSHOT.jar"
+    }, {
+      "type" : "pom",
+      "sha1" : "4910ad481647c7d1dfdf6fc221b8ba7be84f7cc1",
+      "md5" : "520c2930c9ac3a0ce2c167ba7d4400d7",
+      "name" : "gradle-example-minimal-1.0-SNAPSHOT.pom",
+      "path" : "libs-snapshot-local//gradle-example-minimal/1.0-SNAPSHOT/gradle-example-minimal-1.0-SNAPSHOT.pom"
+    } ],
+    "excludedArtifacts" : [ ],
+    "dependencies" : [ ]
+  } ],
+  "governance" : {
+    "blackDuckProperties" : {
+      "runChecks" : false,
+      "includePublishedArtifacts" : false,
+      "autoCreateMissingComponentRequests" : false,
+      "autoDiscardStaleComponentRequests" : false
+    }
+  }
+}
