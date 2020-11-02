@@ -33,7 +33,7 @@ pipelines:
         type: NpmBuild
         configuration:
           npmArgs: --verbose
-          repositoryName: npm-local
+          repositoryName: npm-virtual
           sourceLocation: npm-example
           integrations:
               - name: art
