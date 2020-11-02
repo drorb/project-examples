@@ -1,0 +1,18 @@
+resources:
+  - name: myAppRepo
+    type: GitRepo
+    configuration:
+      gitProvider: GitHub_drorb
+      path: drorb/project-examples
+pipelines:
+  - name: pipeline_npm_example
+    steps:
+      - name: step_install
+        type: NpmBuild
+        configuration:
+          repositoryName: npm-local
+          sourceLocation: .
+          integrations:
+              - name: art
+          inputResources:
+              - name: myAppRepo
