@@ -32,7 +32,7 @@ pipelines:
       - name: step_install
         type: NpmBuild
         configuration:
-          npmArgs: --verbose
+          npmArgs: --verbose publish
           repositoryName: npm-virtual
           sourceLocation: npm-example
           integrations:
