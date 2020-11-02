@@ -32,6 +32,7 @@ pipelines:
       - name: step_install
         type: NpmBuild
         configuration:
+          npmArgs: --verbose
           repositoryName: npm-local
           sourceLocation: npm-example
           integrations:
