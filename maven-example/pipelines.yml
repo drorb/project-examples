@@ -27,4 +27,15 @@ pipelines:
               - name: myAppRepo
           outputResources:
             - name: appl_build_info
+  - name: pipeline_npm_example
+    steps:
+      - name: step_install
+        type: NpmBuild
+        configuration:
+          repositoryName: npm-local
+          sourceLocation: npm-example
+          integrations:
+              - name: art
+          inputResources:
+              - name: myAppRepo
           
