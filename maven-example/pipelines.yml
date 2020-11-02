@@ -48,6 +48,7 @@ pipelines:
         type: NpmPublish
         configuration:
           repositoryName: npm-virtual
+          forceXrayScan: true
           autoPublishBuildInfo: true
           integrations:
               - name: art
