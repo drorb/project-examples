@@ -32,11 +32,18 @@ pipelines:
       - name: step_install
         type: NpmBuild
         configuration:
-          npmArgs: --verbose publish
           repositoryName: npm-virtual
           sourceLocation: npm-example
           integrations:
               - name: art
           inputResources:
               - name: myAppRepo
+      - name: step_publish
+        type: NpmPublish
+        configuration:
+          repositoryName: npm-virtual
+          integrations:
+              - name: art
+          inputSteps:
+            - name: step_install
           
