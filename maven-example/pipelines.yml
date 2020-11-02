@@ -4,11 +4,17 @@ resources:
     configuration:
       gitProvider: GitHub_drorb
       path: drorb/project-examples
-  - name: appl_build_info
+  - name: mvn_build_info
     type: BuildInfo
     configuration:
       sourceArtifactory: art 
       buildName: maven-example
+      buildNumber: 0
+  - name: npm_build_info
+    type: BuildInfo
+    configuration:
+      sourceArtifactory: art 
+      buildName: npm-example
       buildNumber: 0
 pipelines:
   - name: pipeline_maven_example
@@ -26,7 +32,7 @@ pipelines:
           inputResources:
               - name: myAppRepo
           outputResources:
-            - name: appl_build_info
+            - name: mvn_build_info
   - name: pipeline_npm_example
     steps:
       - name: step_install
@@ -42,8 +48,11 @@ pipelines:
         type: NpmPublish
         configuration:
           repositoryName: npm-virtual
+          autoPublishBuildInfo: true
           integrations:
               - name: art
           inputSteps:
             - name: step_install
+          outputResources:
+            - name: npm_build_info
           
