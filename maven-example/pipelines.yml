@@ -22,7 +22,7 @@ pipelines:
       - name: step_install
         type: MvnBuild
         configuration:
-          mvnCommand: clean install
+          mvnCommand: clean test install
           sourceLocation: maven-example
           configFileLocation: .
           configFileName: mvn-art-config.yml
