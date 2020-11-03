@@ -35,7 +35,9 @@ pipelines:
             - name: mvn_build_info
         execution:
             onComplete:
-              - save_tests $res_myAppRepo_resourcePath/target/surefire-reports/
+              - save_tests $res_myAppRepo_resourcePath/maven-example/multi1/target/surefire-reports
+              - save_tests $res_myAppRepo_resourcePath/maven-example/multi2/target/surefire-reports
+              - save_tests $res_myAppRepo_resourcePath/maven-example/multi3/target/surefire-reports
   - name: pipeline_npm_example
     steps:
       - name: step_install
