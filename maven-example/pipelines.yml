@@ -22,7 +22,7 @@ pipelines:
       - name: step_install
         type: MvnBuild
         configuration:
-          mvnCommand: install
+          mvnCommand: clean install
           sourceLocation: maven-example
           configFileLocation: .
           configFileName: mvn-art-config.yml
@@ -33,6 +33,9 @@ pipelines:
               - name: myAppRepo
           outputResources:
             - name: mvn_build_info
+        execution:
+            onComplete:
+              - save_tests $res_myAppRepo_resourcePath/target/surefire-reports/
   - name: pipeline_npm_example
     steps:
       - name: step_install
