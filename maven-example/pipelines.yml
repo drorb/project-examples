@@ -38,6 +38,13 @@ pipelines:
               - save_tests $res_myAppRepo_resourcePath/maven-example/multi1/target/surefire-reports
               - save_tests $res_myAppRepo_resourcePath/maven-example/multi2/target/surefire-reports
               - save_tests $res_myAppRepo_resourcePath/maven-example/multi3/target/surefire-reports
+      - name: step_xray_scan
+        type: XrayScan
+        configuration:
+          failOnScan: true
+          inputResources:
+            - name: mvn_build_info
+              trigger: false
   - name: pipeline_npm_example
     steps:
       - name: step_install
