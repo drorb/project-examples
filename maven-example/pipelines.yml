@@ -44,7 +44,7 @@ pipelines:
           failOnScan: true
           inputResources:
             - name: mvn_build_info
-              trigger: false
+              trigger: true
   - name: pipeline_npm_example
     steps:
       - name: step_install
